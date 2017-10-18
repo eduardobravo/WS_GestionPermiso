@@ -7,6 +7,9 @@
     <service name="USUARIO_tapi">
       <implementation-class>ws_pkg.USUARIO_tapi</implementation-class>
     </service>
+    <service name="TIPO_USUARIO_tapi">
+      <implementation-class>ws_pkg.TIPO_USUARIO_tapi</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
