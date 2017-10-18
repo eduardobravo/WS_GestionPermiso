@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="Pruebas">
+      <implementation-class>ws_pkg.Pruebas</implementation-class>
+    </service>
+    <service name="prueba2">
+      <implementation-class>ws_pkg.prueba2</implementation-class>
+    </service>
+    <service name="CALENDARIO_HABIL">
+      <implementation-class>ws_pkg.CALENDARIO_HABIL</implementation-class>
+    </service>
+    <service name="USUARIO_tapi">
+      <implementation-class>ws_pkg.USUARIO_tapi</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>
