@@ -37,7 +37,7 @@ public class CALENDARIO_HABIL {
     @WebMethod(operationName = "selId")
     public String selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"String",id));
+        lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.retornaJSON("CALENDARIO_HABIL_tapi.selId", lp);
     }
     /**
@@ -59,12 +59,12 @@ public class CALENDARIO_HABIL {
             @WebParam(name = "p_ANIO") String p_ANIO,
             @WebParam(name = "p_DIA") String p_DIA) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"Integer",p_HABIL));
-        lp.add(new PRM(1,"Integer",p_MES));
-        lp.add(new PRM(1,"Integer",p_ID_CALENDARIO));
+        lp.add(new PRM(1,"Int",p_HABIL));
+        lp.add(new PRM(1,"Int",p_MES));
+        lp.add(new PRM(1,"Int",p_ID_CALENDARIO));
         lp.add(new PRM(1,"String",p_RUT_CREACION));
-        lp.add(new PRM(1,"Integer",p_ANIO));
-        lp.add(new PRM(1,"Integer",p_DIA));
+        lp.add(new PRM(1,"Int",p_ANIO));
+        lp.add(new PRM(1,"Int",p_DIA));
         
         return DAL_coneccion.ejecutaTAPI("CALENDARIO_HABIL_tapi.ins", lp);
     }
@@ -88,11 +88,11 @@ public class CALENDARIO_HABIL {
             @WebParam(name = "p_DIA") String p_DIA) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_RUT_ACTUALIZACION));
-        lp.add(new PRM(1,"Integer",p_HABIL));
-        lp.add(new PRM(1,"Integer",p_MES));
-        lp.add(new PRM(1,"Integer",p_ID_CALENDARIO));
-        lp.add(new PRM(1,"Integer",p_ANIO));
-        lp.add(new PRM(1,"Integer",p_DIA));
+        lp.add(new PRM(1,"Int",p_HABIL));
+        lp.add(new PRM(1,"Int",p_MES));
+        lp.add(new PRM(1,"Int",p_ID_CALENDARIO));
+        lp.add(new PRM(1,"Int",p_ANIO));
+        lp.add(new PRM(1,"Int",p_DIA));
         return DAL_coneccion.ejecutaTAPI("CALENDARIO_HABIL_tapi.upd", lp);
     }
     /**
@@ -103,7 +103,7 @@ public class CALENDARIO_HABIL {
     @WebMethod(operationName = "del")
     public int del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"Integer",id));
+        lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.ejecutaTAPI("CALENDARIO_HABIL_tapi.del", lp);
     }
 }

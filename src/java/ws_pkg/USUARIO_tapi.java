@@ -115,7 +115,7 @@ public class USUARIO_tapi {
     @WebMethod(operationName = "del")
     public int del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"Integer",id));
+        lp.add(new PRM(1,"String",id));
         return DAL_coneccion.ejecutaTAPI("USUARIO_tapi.del", lp);
     }
 }

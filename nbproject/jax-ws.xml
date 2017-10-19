@@ -10,6 +10,10 @@
     <service name="TIPO_USUARIO_tapi">
       <implementation-class>ws_pkg.TIPO_USUARIO_tapi</implementation-class>
     </service>
+    <service name="FERIADO_MANUAL_tapi">
+      <implementation-class>ws_pkg.FERIADO_MANUAL_tapi</implementation-class>
+    </service>
   </services>
   <clients/>
+  <jsr109>true</jsr109>
 </jax-ws>
