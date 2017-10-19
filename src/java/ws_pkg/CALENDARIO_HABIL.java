@@ -60,11 +60,11 @@ public class CALENDARIO_HABIL {
             @WebParam(name = "p_DIA") String p_DIA) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",p_HABIL));
-        lp.add(new PRM(1,"Int",p_MES));
-        lp.add(new PRM(1,"Int",p_ID_CALENDARIO));
-        lp.add(new PRM(1,"String",p_RUT_CREACION));
-        lp.add(new PRM(1,"Int",p_ANIO));
-        lp.add(new PRM(1,"Int",p_DIA));
+        lp.add(new PRM(2,"Int",p_MES));
+        lp.add(new PRM(3,"Int",p_ID_CALENDARIO));
+        lp.add(new PRM(4,"String",p_RUT_CREACION));
+        lp.add(new PRM(5,"Int",p_ANIO));
+        lp.add(new PRM(6,"Int",p_DIA));
         
         return DAL_coneccion.ejecutaTAPI("CALENDARIO_HABIL_tapi.ins", lp);
     }
@@ -88,11 +88,11 @@ public class CALENDARIO_HABIL {
             @WebParam(name = "p_DIA") String p_DIA) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_RUT_ACTUALIZACION));
-        lp.add(new PRM(1,"Int",p_HABIL));
-        lp.add(new PRM(1,"Int",p_MES));
-        lp.add(new PRM(1,"Int",p_ID_CALENDARIO));
-        lp.add(new PRM(1,"Int",p_ANIO));
-        lp.add(new PRM(1,"Int",p_DIA));
+        lp.add(new PRM(2,"Int",p_HABIL));
+        lp.add(new PRM(3,"Int",p_MES));
+        lp.add(new PRM(4,"Int",p_ID_CALENDARIO));
+        lp.add(new PRM(5,"Int",p_ANIO));
+        lp.add(new PRM(6,"Int",p_DIA));
         return DAL_coneccion.ejecutaTAPI("CALENDARIO_HABIL_tapi.upd", lp);
     }
     /**

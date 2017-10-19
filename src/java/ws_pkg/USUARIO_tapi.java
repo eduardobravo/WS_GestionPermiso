@@ -64,13 +64,13 @@ public class USUARIO_tapi {
             @WebParam(name = "p_APELLIDOP") String p_APELLIDOP) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_RUT));
-        lp.add(new PRM(1,"String",p_FECHA_CONTRATO));
-        lp.add(new PRM(1,"String",p_APELLIDOM));
-        lp.add(new PRM(1,"String",p_PASSWORD));
-        lp.add(new PRM(1,"String",p_FECHA_INGRESO));
-        lp.add(new PRM(1,"String",p_RUT_CREACION));
-        lp.add(new PRM(1,"String",p_NOMBRE));
-        lp.add(new PRM(1,"String",p_APELLIDOP));
+        lp.add(new PRM(2,"String",p_FECHA_CONTRATO));
+        lp.add(new PRM(3,"String",p_APELLIDOM));
+        lp.add(new PRM(4,"String",p_PASSWORD));
+        lp.add(new PRM(5,"String",p_FECHA_INGRESO));
+        lp.add(new PRM(6,"String",p_RUT_CREACION));
+        lp.add(new PRM(7,"String",p_NOMBRE));
+        lp.add(new PRM(8,"String",p_APELLIDOP));
         
         return DAL_coneccion.ejecutaTAPI("USUARIO_tapi.ins", lp);
     }
@@ -98,13 +98,13 @@ public class USUARIO_tapi {
             @WebParam(name = "p_APELLIDOP") String p_APELLIDOP) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_RUT));
-        lp.add(new PRM(1,"String",p_FECHA_CONTRATO));
-        lp.add(new PRM(1,"String",p_APELLIDOM));
-        lp.add(new PRM(1,"String",p_PASSWORD));
-        lp.add(new PRM(1,"String",p_RUT_ACTUALIZACION));
-        lp.add(new PRM(1,"String",p_FECHA_INGRESO));
-        lp.add(new PRM(1,"String",p_NOMBRE));
-        lp.add(new PRM(1,"String",p_APELLIDOP));
+        lp.add(new PRM(2,"String",p_FECHA_CONTRATO));
+        lp.add(new PRM(3,"String",p_APELLIDOM));
+        lp.add(new PRM(4,"String",p_PASSWORD));
+        lp.add(new PRM(5,"String",p_RUT_ACTUALIZACION));
+        lp.add(new PRM(6,"String",p_FECHA_INGRESO));
+        lp.add(new PRM(7,"String",p_NOMBRE));
+        lp.add(new PRM(8,"String",p_APELLIDOP));
         return DAL_coneccion.ejecutaTAPI("USUARIO_tapi.upd", lp);
     }
     /**

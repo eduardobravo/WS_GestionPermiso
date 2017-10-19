@@ -13,6 +13,9 @@
     <service name="FERIADO_MANUAL_tapi">
       <implementation-class>ws_pkg.FERIADO_MANUAL_tapi</implementation-class>
     </service>
+    <service name="TIPO_DIA_LIBRE_tapi">
+      <implementation-class>ws_pkg.TIPO_DIA_LIBRE_tapi</implementation-class>
+    </service>
   </services>
   <clients/>
   <jsr109>true</jsr109>

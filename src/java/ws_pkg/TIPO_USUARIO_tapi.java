@@ -54,8 +54,8 @@ public class TIPO_USUARIO_tapi {
             @WebParam(name = "p_ID_TIPO_USUARIO") String p_ID_TIPO_USUARIO) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_GLOSA_TIPO_USUARIO));
-        lp.add(new PRM(1,"String",p_RUT_CREACION));
-        lp.add(new PRM(1,"Int",p_ID_TIPO_USUARIO));
+        lp.add(new PRM(2,"String",p_RUT_CREACION));
+        lp.add(new PRM(3,"Int",p_ID_TIPO_USUARIO));
         return DAL_coneccion.ejecutaTAPI("TIPO_USUARIO_tapi.ins", lp);
     }
     /**
@@ -72,8 +72,8 @@ public class TIPO_USUARIO_tapi {
             @WebParam(name = "p_ID_TIPO_USUARIO") String p_ID_TIPO_USUARIO) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_RUT_ACTUALIZACION));
-        lp.add(new PRM(1,"String",p_GLOSA_TIPO_USUARIO));
-        lp.add(new PRM(1,"Int",p_ID_TIPO_USUARIO));
+        lp.add(new PRM(2,"String",p_GLOSA_TIPO_USUARIO));
+        lp.add(new PRM(3,"Int",p_ID_TIPO_USUARIO));
         return DAL_coneccion.ejecutaTAPI("TIPO_USUARIO_tapi.upd", lp);
     }
     /**
