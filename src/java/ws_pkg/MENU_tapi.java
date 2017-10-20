@@ -42,9 +42,10 @@ public class MENU_tapi {
     }
     /**
      * Crear registro
-     * @param p_GLOSA_TIPO_USUARIO
      * @param p_RUT_CREACION
-     * @param p_ID_TIPO_USUARIO
+     * @param p_ID_MENU
+     * @param p_GLOSA_MENU
+     * @param p_PAGINA
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ins")
@@ -63,8 +64,9 @@ public class MENU_tapi {
     /**
      * Actualizar registro
      * @param p_RUT_ACTUALIZACION
-     * @param p_GLOSA_TIPO_USUARIO
-     * @param p_ID_TIPO_USUARIO
+     * @param p_ID_MENU
+     * @param p_GLOSA_MENU
+     * @param p_PAGINA
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "upd")
