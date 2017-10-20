@@ -22,6 +22,9 @@
     <service name="TIPO_APROBACION_tapi">
       <implementation-class>ws_pkg.TIPO_APROBACION_tapi</implementation-class>
     </service>
+    <service name="TIPO_USO_tapi">
+      <implementation-class>ws_pkg.TIPO_USO_tapi</implementation-class>
+    </service>
   </services>
   <clients/>
   <jsr109>true</jsr109>
