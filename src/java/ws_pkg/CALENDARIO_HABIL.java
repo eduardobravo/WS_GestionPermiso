@@ -25,7 +25,7 @@ public class CALENDARIO_HABIL {
      * @return Json
      */
     @WebMethod(operationName = "sel")
-    public String sel() throws Exception {
+    public String ch_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("CALENDARIO_HABIL_tapi.sel", lp);
     }
@@ -35,7 +35,7 @@ public class CALENDARIO_HABIL {
      * @return Json
      */
     @WebMethod(operationName = "selId")
-    public String selId(@WebParam(name = "id") String id) throws Exception {
+    public String ch_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.retornaJSON("CALENDARIO_HABIL_tapi.selId", lp);
@@ -51,7 +51,7 @@ public class CALENDARIO_HABIL {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ins")
-    public int ins(
+    public int ch_ins(
             @WebParam(name = "p_HABIL") String p_HABIL,
             @WebParam(name = "p_MES") String p_MES,
             @WebParam(name = "p_ID_CALENDARIO") String p_ID_CALENDARIO,
@@ -79,7 +79,7 @@ public class CALENDARIO_HABIL {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "upd")
-    public int upd(
+    public int ch_upd(
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
             @WebParam(name = "p_HABIL") String p_HABIL,
             @WebParam(name = "p_MES") String p_MES,
@@ -101,7 +101,7 @@ public class CALENDARIO_HABIL {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "del")
-    public int del(@WebParam(name = "id") String id) throws Exception {
+    public int ch_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.ejecutaTAPI("CALENDARIO_HABIL_tapi.del", lp);

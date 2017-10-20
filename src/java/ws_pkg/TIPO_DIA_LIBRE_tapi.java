@@ -25,7 +25,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @return Json
      */
     @WebMethod(operationName = "sel")
-    public String sel() throws Exception {
+    public String tdl_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("TIPO_DIA_LIBRE_tapi.sel", lp);
     }
@@ -35,7 +35,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @return Json
      */
     @WebMethod(operationName = "selId")
-    public String selId(@WebParam(name = "id") String id) throws Exception {
+    public String tdl_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.retornaJSON("TIPO_DIA_LIBRE_tapi.selId", lp);
@@ -49,7 +49,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ins")
-    public int ins(
+    public int tdl_ins(
             @WebParam(name = "p_ID_TIPO_DIA_LIBRE") String p_ID_TIPO_DIA_LIBRE,
             @WebParam(name = "p_GLOSA_TIPO_DIA_LIBRE") String p_GLOSA_TIPO_DIA_LIBRE,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
@@ -70,7 +70,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "upd")
-    public int upd(
+    public int tdl_upd(
             @WebParam(name = "p_ID_TIPO_DIA_LIBRE") String p_ID_TIPO_DIA_LIBRE,
             @WebParam(name = "p_GLOSA_TIPO_DIA_LIBRE") String p_GLOSA_TIPO_DIA_LIBRE,
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
@@ -88,7 +88,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "del")
-    public int del(@WebParam(name = "id") String id) throws Exception {
+    public int tdl_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.ejecutaTAPI("TIPO_DIA_LIBRE_tapi.del", lp);

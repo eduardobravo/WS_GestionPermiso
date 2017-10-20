@@ -25,7 +25,7 @@ public class TIPO_USO_tapi {
      * @return Json
      */
     @WebMethod(operationName = "sel")
-    public String sel() throws Exception {
+    public String tuso_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("TIPO_USO_tapi.sel", lp);
     }
@@ -35,7 +35,7 @@ public class TIPO_USO_tapi {
      * @return Json
      */
     @WebMethod(operationName = "selId")
-    public String selId(@WebParam(name = "id") String id) throws Exception {
+    public String tuso_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.retornaJSON("TIPO_USO_tapi.selId", lp);
@@ -48,7 +48,7 @@ public class TIPO_USO_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ins")
-    public int ins(
+    public int tuso_ins(
             @WebParam(name = "p_GLOSA_TIPO_USO") String p_GLOSA_TIPO_USO,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_ID_TIPO_USO") String p_ID_TIPO_USO) throws Exception {
@@ -66,7 +66,7 @@ public class TIPO_USO_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "upd")
-    public int upd(
+    public int tuso_upd(
             @WebParam(name = "p_GLOSA_TIPO_USO") String p_GLOSA_TIPO_USO,
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
             @WebParam(name = "p_ID_TIPO_USO") String p_ID_TIPO_USO) throws Exception {
@@ -82,7 +82,7 @@ public class TIPO_USO_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "del")
-    public int del(@WebParam(name = "id") String id) throws Exception {
+    public int tuso_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.ejecutaTAPI("TIPO_USO_tapi.del", lp);

@@ -25,7 +25,7 @@ public class USUARIO_tapi {
      * @return Json
      */
     @WebMethod(operationName = "sel")
-    public String sel() throws Exception {
+    public String u_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("USUARIO_tapi.sel", lp);
     }
@@ -35,7 +35,7 @@ public class USUARIO_tapi {
      * @return Json
      */
     @WebMethod(operationName = "selId")
-    public String selId(@WebParam(name = "id") String id) throws Exception {
+    public String u_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",id));
         return DAL_coneccion.retornaJSON("USUARIO_tapi.selId", lp);
@@ -53,7 +53,7 @@ public class USUARIO_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ins")
-    public int ins(
+    public int u_ins(
             @WebParam(name = "p_RUT") String p_RUT,
             @WebParam(name = "p_FECHA_CONTRATO") String p_FECHA_CONTRATO,
             @WebParam(name = "p_APELLIDOM") String p_APELLIDOM,
@@ -87,7 +87,7 @@ public class USUARIO_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "upd")
-    public int upd(
+    public int u_upd(
             @WebParam(name = "p_RUT") String p_RUT,
             @WebParam(name = "p_FECHA_CONTRATO") String p_FECHA_CONTRATO,
             @WebParam(name = "p_APELLIDOM") String p_APELLIDOM,
@@ -113,7 +113,7 @@ public class USUARIO_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "del")
-    public int del(@WebParam(name = "id") String id) throws Exception {
+    public int u_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",id));
         return DAL_coneccion.ejecutaTAPI("USUARIO_tapi.del", lp);

@@ -25,7 +25,7 @@ public class REGISTRO_ALERTA_tapi {
      * @return Json
      */
     @WebMethod(operationName = "sel")
-    public String sel() throws Exception {
+    public String ra_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("REGISTRO_ALERTA_tapi.sel", lp);
     }
@@ -35,7 +35,7 @@ public class REGISTRO_ALERTA_tapi {
      * @return Json
      */
     @WebMethod(operationName = "selId")
-    public String selId(@WebParam(name = "id") String id) throws Exception {
+    public String ra_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.retornaJSON("REGISTRO_ALERTA_tapi.selId", lp);
@@ -49,7 +49,7 @@ public class REGISTRO_ALERTA_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ins")
-    public int ins(
+    public int ra_ins(
             @WebParam(name = "p_ID_REGISTRO_ALERTA") String p_ID_REGISTRO_ALERTA,
             @WebParam(name = "p_RUT_ALUDIDO") String p_RUT_ALUDIDO,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
@@ -70,7 +70,7 @@ public class REGISTRO_ALERTA_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "upd")
-    public int upd(
+    public int ra_upd(
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
             @WebParam(name = "p_ID_REGISTRO_ALERTA") String p_ID_REGISTRO_ALERTA,
             @WebParam(name = "p_RUT_ALUDIDO") String p_RUT_ALUDIDO,
@@ -88,7 +88,7 @@ public class REGISTRO_ALERTA_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "del")
-    public int del(@WebParam(name = "id") String id) throws Exception {
+    public int ra_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
         return DAL_coneccion.ejecutaTAPI("REGISTRO_ALERTA_tapi.del", lp);
