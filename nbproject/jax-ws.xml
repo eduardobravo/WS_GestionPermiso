@@ -40,6 +40,9 @@
     <service name="REL_USUA_UND_INTRN_tapi">
       <implementation-class>ws_pkg.REL_USUA_UND_INTRN_tapi</implementation-class>
     </service>
+    <service name="LOG_REGISTRO_tapi">
+      <implementation-class>ws_pkg.LOG_REGISTRO_tapi</implementation-class>
+    </service>
   </services>
   <clients/>
   <jsr109>true</jsr109>
