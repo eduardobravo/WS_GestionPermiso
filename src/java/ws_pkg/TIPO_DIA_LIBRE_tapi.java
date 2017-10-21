@@ -24,7 +24,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * Lista completa
      * @return Json
      */
-    @WebMethod(operationName = "sel")
+    @WebMethod(operationName = "tdl_sel")
     public String tdl_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("TIPO_DIA_LIBRE_tapi.sel", lp);
@@ -34,7 +34,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @param id
      * @return Json
      */
-    @WebMethod(operationName = "selId")
+    @WebMethod(operationName = "tdl_selId")
     public String tdl_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
@@ -48,7 +48,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @param p_CANTIDAD_DIAS
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "ins")
+    @WebMethod(operationName = "tdl_ins")
     public int tdl_ins(
             @WebParam(name = "p_ID_TIPO_DIA_LIBRE") String p_ID_TIPO_DIA_LIBRE,
             @WebParam(name = "p_GLOSA_TIPO_DIA_LIBRE") String p_GLOSA_TIPO_DIA_LIBRE,
@@ -69,7 +69,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @param p_CANTIDAD_DIAS
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "upd")
+    @WebMethod(operationName = "tdl_upd")
     public int tdl_upd(
             @WebParam(name = "p_ID_TIPO_DIA_LIBRE") String p_ID_TIPO_DIA_LIBRE,
             @WebParam(name = "p_GLOSA_TIPO_DIA_LIBRE") String p_GLOSA_TIPO_DIA_LIBRE,
@@ -87,7 +87,7 @@ public class TIPO_DIA_LIBRE_tapi {
      * @param id
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "del")
+    @WebMethod(operationName = "tdl_del")
     public int tdl_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));

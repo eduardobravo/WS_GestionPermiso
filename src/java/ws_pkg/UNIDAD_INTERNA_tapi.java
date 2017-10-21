@@ -24,7 +24,7 @@ public class UNIDAD_INTERNA_tapi {
      * Lista completa
      * @return Json
      */
-    @WebMethod(operationName = "sel")
+    @WebMethod(operationName = "ui_sel")
     public String ui_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("UNIDAD_INTERNA_tapi.sel", lp);
@@ -34,7 +34,7 @@ public class UNIDAD_INTERNA_tapi {
      * @param id
      * @return Json
      */
-    @WebMethod(operationName = "selId")
+    @WebMethod(operationName = "ui_selId")
     public String ui_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
@@ -47,7 +47,7 @@ public class UNIDAD_INTERNA_tapi {
      * @param p_GLOSA_UNIDAD_INTERNA
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "ins")
+    @WebMethod(operationName = "ui_ins")
     public int ui_ins(
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_ID_UNIDAD_INTERNA") String p_ID_UNIDAD_INTERNA,
@@ -65,7 +65,7 @@ public class UNIDAD_INTERNA_tapi {
      * @param p_GLOSA_UNIDAD_INTERNA
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "upd")
+    @WebMethod(operationName = "ui_upd")
     public int ui_upd(
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
             @WebParam(name = "p_ID_UNIDAD_INTERNA") String p_ID_UNIDAD_INTERNA,
@@ -81,7 +81,7 @@ public class UNIDAD_INTERNA_tapi {
      * @param id
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "del")
+    @WebMethod(operationName = "ui_del")
     public int ui_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));

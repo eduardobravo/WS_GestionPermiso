@@ -24,7 +24,7 @@ public class REGISTRO_ALERTA_tapi {
      * Lista completa
      * @return Json
      */
-    @WebMethod(operationName = "sel")
+    @WebMethod(operationName = "ra_sel")
     public String ra_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("REGISTRO_ALERTA_tapi.sel", lp);
@@ -34,7 +34,7 @@ public class REGISTRO_ALERTA_tapi {
      * @param id
      * @return Json
      */
-    @WebMethod(operationName = "selId")
+    @WebMethod(operationName = "ra_selId")
     public String ra_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
@@ -48,7 +48,7 @@ public class REGISTRO_ALERTA_tapi {
      * @param p_OBSERVACION
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "ins")
+    @WebMethod(operationName = "ra_ins")
     public int ra_ins(
             @WebParam(name = "p_ID_REGISTRO_ALERTA") String p_ID_REGISTRO_ALERTA,
             @WebParam(name = "p_RUT_ALUDIDO") String p_RUT_ALUDIDO,
@@ -69,7 +69,7 @@ public class REGISTRO_ALERTA_tapi {
      * @param p_OBSERVACION
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "upd")
+    @WebMethod(operationName = "ra_upd")
     public int ra_upd(
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
             @WebParam(name = "p_ID_REGISTRO_ALERTA") String p_ID_REGISTRO_ALERTA,
@@ -87,7 +87,7 @@ public class REGISTRO_ALERTA_tapi {
      * @param id
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "del")
+    @WebMethod(operationName = "ra_del")
     public int ra_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));

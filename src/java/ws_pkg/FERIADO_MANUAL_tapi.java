@@ -24,7 +24,7 @@ public class FERIADO_MANUAL_tapi {
      * Lista completa
      * @return Json
      */
-    @WebMethod(operationName = "sel")
+    @WebMethod(operationName = "fm_sel")
     public String fm_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("FERIADO_MANUAL_tapi.sel", lp);
@@ -34,7 +34,7 @@ public class FERIADO_MANUAL_tapi {
      * @param id
      * @return Json
      */
-    @WebMethod(operationName = "selId")
+    @WebMethod(operationName = "fm_selId")
     public String fm_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
@@ -49,7 +49,7 @@ public class FERIADO_MANUAL_tapi {
      * @param p_ID_FERIADO_MANUAL
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "ins")
+    @WebMethod(operationName = "fm_ins")
     public int fm_ins(
             @WebParam(name = "p_MES") String p_MES,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
@@ -73,7 +73,7 @@ public class FERIADO_MANUAL_tapi {
      * @param p_ID_FERIADO_MANUAL
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "upd")
+    @WebMethod(operationName = "fm_upd")
     public int fm_upd(
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
             @WebParam(name = "p_MES") String p_MES,
@@ -93,7 +93,7 @@ public class FERIADO_MANUAL_tapi {
      * @param id
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "del")
+    @WebMethod(operationName = "fm_del")
     public int fm_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));

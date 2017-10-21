@@ -24,7 +24,7 @@ public class TIPO_APROBACION_tapi {
      * Lista completa
      * @return Json
      */
-    @WebMethod(operationName = "sel")
+    @WebMethod(operationName = "ta_sel")
     public String ta_sel() throws Exception {
         List<PRM> lp = new ArrayList<>();
         return DAL_coneccion.retornaJSON("TIPO_APROBACION_tapi.sel", lp);
@@ -34,7 +34,7 @@ public class TIPO_APROBACION_tapi {
      * @param id
      * @return Json
      */
-    @WebMethod(operationName = "selId")
+    @WebMethod(operationName = "ta_selId")
     public String ta_selId(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
@@ -47,7 +47,7 @@ public class TIPO_APROBACION_tapi {
      * @param p_RUT_CREACION
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "ins")
+    @WebMethod(operationName = "ta_ins")
     public int ta_ins(
             @WebParam(name = "p_ID_TIPO_APROBACION") String p_ID_TIPO_APROBACION,
             @WebParam(name = "p_GLOSA_TIPO_APROBACION") String p_GLOSA_TIPO_APROBACION,
@@ -65,7 +65,7 @@ public class TIPO_APROBACION_tapi {
      * @param p_GLOSA_TIPO_APROBACION
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "upd")
+    @WebMethod(operationName = "ta_upd")
     public int ta_upd(
             @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
             @WebParam(name = "p_ID_TIPO_APROBACION") String p_ID_TIPO_APROBACION,
@@ -81,7 +81,7 @@ public class TIPO_APROBACION_tapi {
      * @param id
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "del")
+    @WebMethod(operationName = "ta_del")
     public int ta_del(@WebParam(name = "id") String id) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",id));
