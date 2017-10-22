@@ -81,6 +81,7 @@ public class SOLICITUD_DIA_tapi {
             @WebParam(name = "p_ID_TIPO_DIA_LIBRE") String p_ID_TIPO_DIA_LIBRE,
             @WebParam(name = "p_ID_TIPO_APROBACION") String p_ID_TIPO_APROBACION,
             @WebParam(name = "p_ID_TIPO_USO") String p_ID_TIPO_USO) throws Exception {
+        String p_ID_SOLICITUD_DIA = "";
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_RUT_CREACION));
         lp.add(new PRM(2,"String",p_OBSERVACION));
@@ -91,6 +92,8 @@ public class SOLICITUD_DIA_tapi {
         lp.add(new PRM(7,"Int",p_ID_TIPO_DIA_LIBRE));
         lp.add(new PRM(8,"Int",p_ID_TIPO_APROBACION));
         lp.add(new PRM(9,"Int",p_ID_TIPO_USO));
+        
+        lp.add(new PRM(10,"Int",p_ID_SOLICITUD_DIA));
         return DAL_coneccion.ejecutaTAPI("SOLICITUD_DIA_tapi.ins", lp);
     }
     /**
