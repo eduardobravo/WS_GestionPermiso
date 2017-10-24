@@ -48,15 +48,13 @@ public class TIPO_USO_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "tuso_ins")
-    public int tuso_ins(
+    public String tuso_ins(
             @WebParam(name = "p_GLOSA_TIPO_USO") String p_GLOSA_TIPO_USO,
-            @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
-            @WebParam(name = "p_ID_TIPO_USO") String p_ID_TIPO_USO) throws Exception {
+            @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_GLOSA_TIPO_USO));
         lp.add(new PRM(2,"String",p_RUT_CREACION));
-        lp.add(new PRM(3,"Int",p_ID_TIPO_USO));
-        return DAL_coneccion.ejecutaTAPI("TIPO_USO_tapi.ins", lp);
+        return DAL_coneccion.retornaJSON("TIPO_USO_tapi.ins", lp);
     }
     /**
      * Actualizar registro
