@@ -42,21 +42,18 @@ public class TIPO_APROBACION_tapi {
     }
     /**
      * Crear registro
-     * @param p_ID_TIPO_APROBACION
      * @param p_GLOSA_TIPO_APROBACION
      * @param p_RUT_CREACION
-     * @return número de filas afectadas
+     * @return Json
      */
     @WebMethod(operationName = "ta_ins")
-    public int ta_ins(
-            @WebParam(name = "p_ID_TIPO_APROBACION") String p_ID_TIPO_APROBACION,
+    public String ta_ins(
             @WebParam(name = "p_GLOSA_TIPO_APROBACION") String p_GLOSA_TIPO_APROBACION,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"Int",p_ID_TIPO_APROBACION));
-        lp.add(new PRM(2,"String",p_GLOSA_TIPO_APROBACION));
-        lp.add(new PRM(3,"String",p_RUT_CREACION));
-        return DAL_coneccion.ejecutaTAPI("TIPO_APROBACION_tapi.ins", lp);
+        lp.add(new PRM(1,"String",p_GLOSA_TIPO_APROBACION));
+        lp.add(new PRM(2,"String",p_RUT_CREACION));
+        return DAL_coneccion.retornaJSON("TIPO_APROBACION_tapi.ins", lp);
     }
     /**
      * Actualizar registro
