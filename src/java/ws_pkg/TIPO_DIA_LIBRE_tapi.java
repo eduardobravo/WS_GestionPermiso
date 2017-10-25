@@ -49,17 +49,15 @@ public class TIPO_DIA_LIBRE_tapi {
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "tdl_ins")
-    public int tdl_ins(
-            @WebParam(name = "p_ID_TIPO_DIA_LIBRE") String p_ID_TIPO_DIA_LIBRE,
+    public String tdl_ins(
             @WebParam(name = "p_GLOSA_TIPO_DIA_LIBRE") String p_GLOSA_TIPO_DIA_LIBRE,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_CANTIDAD_DIAS") String p_CANTIDAD_DIAS) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"Int",p_ID_TIPO_DIA_LIBRE));
-        lp.add(new PRM(2,"String",p_GLOSA_TIPO_DIA_LIBRE));
-        lp.add(new PRM(3,"String",p_RUT_CREACION));
-        lp.add(new PRM(4,"Int",p_CANTIDAD_DIAS));
-        return DAL_coneccion.ejecutaTAPI("TIPO_DIA_LIBRE_tapi.ins", lp);
+        lp.add(new PRM(1,"String",p_GLOSA_TIPO_DIA_LIBRE));
+        lp.add(new PRM(2,"String",p_RUT_CREACION));
+        lp.add(new PRM(3,"Int",p_CANTIDAD_DIAS));
+        return DAL_coneccion.retornaJSON("TIPO_DIA_LIBRE_tapi.ins", lp);
     }
     /**
      * Actualizar registro
