@@ -70,8 +70,8 @@ public class SOLICITUD_DIA_tapi {
      * @param p_ID_TIPO_USO
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "sd_ins_json")
-    public String sd_ins_json(
+    @WebMethod(operationName = "sd_ins")
+    public String sd_ins(
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_OBSERVACION") String p_OBSERVACION,
             @WebParam(name = "p_FECHA_INICIO") String p_FECHA_INICIO,
@@ -107,8 +107,9 @@ public class SOLICITUD_DIA_tapi {
      * @param p_ID_TIPO_USO
      * @return número de filas afectadas
      */
-    @WebMethod(operationName = "sd_ins_int")
-    public int sd_ins_int(
+    /*
+    @WebMethod(operationName = "sd_ins")
+    public int sd_ins(
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_OBSERVACION") String p_OBSERVACION,
             @WebParam(name = "p_FECHA_INICIO") String p_FECHA_INICIO,
@@ -132,6 +133,7 @@ public class SOLICITUD_DIA_tapi {
         lp.add(new PRM(10,"Int",p_ID_SOLICITUD_DIA));
         return DAL_coneccion.ejecutaTAPI("SOLICITUD_DIA_tapi.ins", lp);
     }
+    */
     /**
      * Actualizar registro
      * @param p_RUT_CREACION
