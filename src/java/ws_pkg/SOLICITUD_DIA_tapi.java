@@ -95,46 +95,6 @@ public class SOLICITUD_DIA_tapi {
     }
     
     /**
-     * Crear registro
-     * @param p_RUT_CREACION
-     * @param p_OBSERVACION
-     * @param p_FECHA_INICIO
-     * @param p_CANTIDAD_DIAS
-     * @param p_FECHA_FIN
-     * @param p_RUT
-     * @param p_ID_TIPO_DIA_LIBRE
-     * @param p_ID_TIPO_APROBACION
-     * @param p_ID_TIPO_USO
-     * @return número de filas afectadas
-     */
-    /*
-    @WebMethod(operationName = "sd_ins")
-    public int sd_ins(
-            @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
-            @WebParam(name = "p_OBSERVACION") String p_OBSERVACION,
-            @WebParam(name = "p_FECHA_INICIO") String p_FECHA_INICIO,
-            @WebParam(name = "p_CANTIDAD_DIAS") String p_CANTIDAD_DIAS,
-            @WebParam(name = "p_FECHA_FIN") String p_FECHA_FIN,
-            @WebParam(name = "p_RUT") String p_RUT,
-            @WebParam(name = "p_ID_TIPO_DIA_LIBRE") String p_ID_TIPO_DIA_LIBRE,
-            @WebParam(name = "p_ID_TIPO_APROBACION") String p_ID_TIPO_APROBACION,
-            @WebParam(name = "p_ID_TIPO_USO") String p_ID_TIPO_USO) throws Exception {
-        String p_ID_SOLICITUD_DIA = "0";
-        List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"String",p_RUT_CREACION));
-        lp.add(new PRM(2,"String",p_OBSERVACION));
-        lp.add(new PRM(3,"String",p_FECHA_INICIO));
-        lp.add(new PRM(4,"Int",p_CANTIDAD_DIAS));
-        lp.add(new PRM(5,"String",p_FECHA_FIN));
-        lp.add(new PRM(6,"String",p_RUT));
-        lp.add(new PRM(7,"Int",p_ID_TIPO_DIA_LIBRE));
-        lp.add(new PRM(8,"Int",p_ID_TIPO_APROBACION));
-        lp.add(new PRM(9,"Int",p_ID_TIPO_USO));
-        lp.add(new PRM(10,"Int",p_ID_SOLICITUD_DIA));
-        return DAL_coneccion.ejecutaTAPI("SOLICITUD_DIA_tapi.ins", lp);
-    }
-    */
-    /**
      * Actualizar registro
      * @param p_RUT_CREACION
      * @param p_OBSERVACION

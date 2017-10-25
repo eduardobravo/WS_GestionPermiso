@@ -44,7 +44,6 @@ public class TIPO_USO_tapi {
      * Crear registro
      * @param p_GLOSA_TIPO_USO
      * @param p_RUT_CREACION
-     * @param p_ID_TIPO_USO
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "tuso_ins")

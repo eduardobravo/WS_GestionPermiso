@@ -44,29 +44,25 @@ public class CALENDARIO_HABIL {
      * Crear registro
      * @param p_HABIL
      * @param p_MES
-     * @param p_ID_CALENDARIO
      * @param p_RUT_CREACION
      * @param p_ANIO
      * @param p_DIA
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ch_ins")
-    public int ch_ins(
+    public String ch_ins(
             @WebParam(name = "p_HABIL") String p_HABIL,
             @WebParam(name = "p_MES") String p_MES,
-            @WebParam(name = "p_ID_CALENDARIO") String p_ID_CALENDARIO,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_ANIO") String p_ANIO,
             @WebParam(name = "p_DIA") String p_DIA) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",p_HABIL));
         lp.add(new PRM(2,"Int",p_MES));
-        lp.add(new PRM(3,"Int",p_ID_CALENDARIO));
-        lp.add(new PRM(4,"String",p_RUT_CREACION));
-        lp.add(new PRM(5,"Int",p_ANIO));
-        lp.add(new PRM(6,"Int",p_DIA));
-        
-        return DAL_coneccion.ejecutaTAPI("CALENDARIO_HABIL_tapi.ins", lp);
+        lp.add(new PRM(3,"String",p_RUT_CREACION));
+        lp.add(new PRM(4,"Int",p_ANIO));
+        lp.add(new PRM(5,"Int",p_DIA));
+        return DAL_coneccion.retornaJSON("CALENDARIO_HABIL_tapi.ins", lp);
     }
     /**
      * Actualizar registro

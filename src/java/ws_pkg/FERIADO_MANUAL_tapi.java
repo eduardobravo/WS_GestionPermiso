@@ -46,23 +46,20 @@ public class FERIADO_MANUAL_tapi {
      * @param p_RUT_CREACION
      * @param p_ANIO
      * @param p_DIA
-     * @param p_ID_FERIADO_MANUAL
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "fm_ins")
-    public int fm_ins(
+    public String fm_ins(
             @WebParam(name = "p_MES") String p_MES,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_ANIO") String p_ANIO,
-            @WebParam(name = "p_DIA") String p_DIA,
-            @WebParam(name = "p_ID_FERIADO_MANUAL") String p_ID_FERIADO_MANUAL) throws Exception {
+            @WebParam(name = "p_DIA") String p_DIA) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"Int",p_MES));
         lp.add(new PRM(2,"String",p_RUT_CREACION));
         lp.add(new PRM(3,"Int",p_ANIO));
         lp.add(new PRM(4,"Int",p_DIA));
-        lp.add(new PRM(5,"Int",p_ID_FERIADO_MANUAL));
-        return DAL_coneccion.ejecutaTAPI("FERIADO_MANUAL_tapi.ins", lp);
+        return DAL_coneccion.retornaJSON("FERIADO_MANUAL_tapi.ins", lp);
     }
     /**
      * Actualizar registro
