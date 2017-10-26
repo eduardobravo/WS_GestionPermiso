@@ -44,19 +44,16 @@ public class TIPO_USUARIO_tapi {
      * Crear registro
      * @param p_GLOSA_TIPO_USUARIO
      * @param p_RUT_CREACION
-     * @param p_ID_TIPO_USUARIO
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "tu_ins")
-    public int tu_ins(
+    public String tu_ins(
             @WebParam(name = "p_GLOSA_TIPO_USUARIO") String p_GLOSA_TIPO_USUARIO,
-            @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
-            @WebParam(name = "p_ID_TIPO_USUARIO") String p_ID_TIPO_USUARIO) throws Exception {
+            @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_GLOSA_TIPO_USUARIO));
         lp.add(new PRM(2,"String",p_RUT_CREACION));
-        lp.add(new PRM(3,"Int",p_ID_TIPO_USUARIO));
-        return DAL_coneccion.ejecutaTAPI("TIPO_USUARIO_tapi.ins", lp);
+        return DAL_coneccion.retornaJSON("TIPO_USUARIO_tapi.ins", lp);
     }
     /**
      * Actualizar registro
