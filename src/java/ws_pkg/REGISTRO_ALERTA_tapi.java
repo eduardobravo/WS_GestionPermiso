@@ -42,24 +42,21 @@ public class REGISTRO_ALERTA_tapi {
     }
     /**
      * Crear registro
-     * @param p_ID_REGISTRO_ALERTA
      * @param p_RUT_ALUDIDO
      * @param p_RUT_CREACION
      * @param p_OBSERVACION
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ra_ins")
-    public int ra_ins(
-            @WebParam(name = "p_ID_REGISTRO_ALERTA") String p_ID_REGISTRO_ALERTA,
+    public String ra_ins(
             @WebParam(name = "p_RUT_ALUDIDO") String p_RUT_ALUDIDO,
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
             @WebParam(name = "p_OBSERVACION") String p_OBSERVACION) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"Int",p_ID_REGISTRO_ALERTA));
-        lp.add(new PRM(2,"String",p_RUT_ALUDIDO));
-        lp.add(new PRM(3,"String",p_RUT_CREACION));
-        lp.add(new PRM(4,"String",p_OBSERVACION));
-        return DAL_coneccion.ejecutaTAPI("REGISTRO_ALERTA_tapi.ins", lp);
+        lp.add(new PRM(1,"String",p_RUT_ALUDIDO));
+        lp.add(new PRM(2,"String",p_RUT_CREACION));
+        lp.add(new PRM(3,"String",p_OBSERVACION));
+        return DAL_coneccion.retornaJSON("REGISTRO_ALERTA_tapi.ins", lp);
     }
     /**
      * Actualizar registro
