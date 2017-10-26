@@ -69,30 +69,6 @@ public class REL_USUA_UND_INTRN_tapi {
         return DAL_coneccion.ejecutaTAPI("REL_USUA_UND_INTRN_tapi.ins", lp);
     }
     /**
-     * Actualizar registro
-     * @param p_RUT
-     * @param p_RUT_ACTUALIZACION
-     * @param p_JEFE
-     * @param p_ID_UNIDAD_INTERNA
-     * @param p_ID_UNIDAD_INTERNA_PADRE
-     * @return número de filas afectadas
-     */
-    @WebMethod(operationName = "ruui_upd")
-    public int ruui_upd(
-            @WebParam(name = "p_RUT") String p_RUT,
-            @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
-            @WebParam(name = "p_JEFE") String p_JEFE,
-            @WebParam(name = "p_ID_UNIDAD_INTERNA") String p_ID_UNIDAD_INTERNA,
-            @WebParam(name = "p_ID_UNIDAD_INTERNA_PADRE") String p_ID_UNIDAD_INTERNA_PADRE) throws Exception {
-        List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"String",p_RUT));
-        lp.add(new PRM(2,"String",p_RUT_ACTUALIZACION));
-        lp.add(new PRM(3,"Int",p_JEFE));
-        lp.add(new PRM(4,"Int",p_ID_UNIDAD_INTERNA));
-        lp.add(new PRM(5,"Int",p_ID_UNIDAD_INTERNA_PADRE));
-        return DAL_coneccion.ejecutaTAPI("REL_USUA_UND_INTRN_tapi.upd", lp);
-    }
-    /**
      * Eliminar registro
      * @param p_ID_UNIDAD_INTERNA
      * @param p_RUT
