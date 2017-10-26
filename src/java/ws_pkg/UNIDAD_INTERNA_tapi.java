@@ -43,20 +43,17 @@ public class UNIDAD_INTERNA_tapi {
     /**
      * Crear registro
      * @param p_RUT_CREACION
-     * @param p_ID_UNIDAD_INTERNA
      * @param p_GLOSA_UNIDAD_INTERNA
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "ui_ins")
-    public int ui_ins(
+    public String ui_ins(
             @WebParam(name = "p_RUT_CREACION") String p_RUT_CREACION,
-            @WebParam(name = "p_ID_UNIDAD_INTERNA") String p_ID_UNIDAD_INTERNA,
             @WebParam(name = "p_GLOSA_UNIDAD_INTERNA") String p_GLOSA_UNIDAD_INTERNA) throws Exception {
         List<PRM> lp = new ArrayList<>();
         lp.add(new PRM(1,"String",p_RUT_CREACION));
-        lp.add(new PRM(2,"Int",p_ID_UNIDAD_INTERNA));
-        lp.add(new PRM(3,"String",p_GLOSA_UNIDAD_INTERNA));
-        return DAL_coneccion.ejecutaTAPI("UNIDAD_INTERNA_tapi.ins", lp);
+        lp.add(new PRM(2,"String",p_GLOSA_UNIDAD_INTERNA));
+        return DAL_coneccion.retornaJSON("UNIDAD_INTERNA_tapi.ins", lp);
     }
     /**
      * Actualizar registro
