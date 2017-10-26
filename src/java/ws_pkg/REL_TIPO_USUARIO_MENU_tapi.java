@@ -63,24 +63,6 @@ public class REL_TIPO_USUARIO_MENU_tapi {
         return DAL_coneccion.ejecutaTAPI("REL_TIPO_USUARIO_MENU_tapi.ins", lp);
     }
     /**
-     * Actualizar registro
-     * @param p_RUT_ACTUALIZACION
-     * @param p_ID_TIPO_USUARIO
-     * @param p_ID_MENU
-     * @return número de filas afectadas
-     */
-    @WebMethod(operationName = "rtum_upd")
-    public int rtum_upd(
-            @WebParam(name = "p_RUT_ACTUALIZACION") String p_RUT_ACTUALIZACION,
-            @WebParam(name = "p_ID_TIPO_USUARIO") String p_ID_TIPO_USUARIO,
-            @WebParam(name = "p_ID_MENU") String p_ID_MENU) throws Exception {
-        List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"String",p_RUT_ACTUALIZACION));
-        lp.add(new PRM(2,"Int",p_ID_TIPO_USUARIO));
-        lp.add(new PRM(3,"Int",p_ID_MENU));
-        return DAL_coneccion.ejecutaTAPI("REL_TIPO_USUARIO_MENU_tapi.upd", lp);
-    }
-    /**
      * Eliminar registro
      * @param p_ID_TIPO_USUARIO
      * @param p_ID_MENU
