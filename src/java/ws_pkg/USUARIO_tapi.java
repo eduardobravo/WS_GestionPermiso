@@ -22,22 +22,24 @@ public class USUARIO_tapi {
 
     /**
      * Lista completa
+     * @param flag_activo
      * @return Json
      */
     @WebMethod(operationName = "u_sel")
-    public String u_sel() throws Exception {
+    public String u_sel(@WebParam(name = "flag_activo") String flag_activo) throws Exception {
         List<PRM> lp = new ArrayList<>();
+        lp.add(new PRM(1,"Int",flag_activo));
         return DAL_coneccion.retornaJSON("USUARIO_tapi.sel", lp);
     }
     /**
      * Selección por ID
-     * @param id
+     * @param rut
      * @return Json
      */
     @WebMethod(operationName = "u_selId")
-    public String u_selId(@WebParam(name = "id") String id) throws Exception {
+    public String u_selId(@WebParam(name = "rut") String rut) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"String",id));
+        lp.add(new PRM(1,"String",rut));
         return DAL_coneccion.retornaJSON("USUARIO_tapi.selId", lp);
     }
     /**
@@ -109,13 +111,27 @@ public class USUARIO_tapi {
     }
     /**
      * Eliminar registro
-     * @param id
+     * @param rut
      * @return número de filas afectadas
      */
     @WebMethod(operationName = "u_del")
-    public int u_del(@WebParam(name = "id") String id) throws Exception {
+    public int u_del(@WebParam(name = "rut") String rut) throws Exception {
         List<PRM> lp = new ArrayList<>();
-        lp.add(new PRM(1,"String",id));
+        lp.add(new PRM(1,"String",rut));
         return DAL_coneccion.ejecutaTAPI("USUARIO_tapi.del", lp);
+    }
+    /**
+     * Activar o desactivar un registro
+     * @param rut
+     * @param flag_activo
+     * @return número de filas afectadas
+     */
+    @WebMethod(operationName = "u_active")
+    public int u_active(@WebParam(name = "rut") String rut,
+            @WebParam(name = "flag_activo") String flag_activo) throws Exception {
+        List<PRM> lp = new ArrayList<>();
+        lp.add(new PRM(1,"String",rut));
+        lp.add(new PRM(2,"Int",flag_activo));
+        return DAL_coneccion.ejecutaTAPI("USUARIO_tapi.active", lp);
     }
 }
