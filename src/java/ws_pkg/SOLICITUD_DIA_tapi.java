@@ -57,6 +57,18 @@ public class SOLICITUD_DIA_tapi {
         lp.add(new PRM(1,"String",p_RUT));
         return DAL_coneccion.retornaJSON("SOLICITUD_DIA_tapi.selId", lp);
     }
+    
+    
+            
+    @WebMethod(operationName = "sd_selRetornaFecha")
+    public String sd_selRetornaFecha(@WebParam(name = "p_FECHA_INICIO") String p_FECHA_INICIO,
+            @WebParam(name = "p_CANTIDAD_DIAS") String p_CANTIDAD_DIAS) throws Exception {
+        List<PRM> lp = new ArrayList<>();
+        lp.add(new PRM(1,"Int",p_FECHA_INICIO));
+        lp.add(new PRM(2,"Int",p_CANTIDAD_DIAS));
+        return DAL_coneccion.retornaJSON("SOLICITUD_DIA_tapi.selRetornaFecha", lp);
+    }
+    
     /**
      * Crear registro
      * @param p_RUT_CREACION
