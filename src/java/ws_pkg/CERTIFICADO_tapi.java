@@ -56,6 +56,19 @@ public class CERTIFICADO_tapi {
     
     /**
      *
+     * @param p_ID_UNIDAD_INTERNA
+     * @return
+     * @throws Exception
+     */
+    @WebMethod(operationName = "c_selUnidadInterna")
+    public String c_selUnidadInterna(@WebParam(name = "p_ID_UNIDAD_INTERNA") String p_ID_UNIDAD_INTERNA) throws Exception {
+        List<PRM> lp = new ArrayList<>();
+        lp.add(new PRM(1,"Int",p_ID_UNIDAD_INTERNA));
+        return DAL_coneccion.retornaJSON("CERTIFICADO_tapi.selId", lp);
+    }
+    
+    /**
+     *
      * @param p_ID_SOLICITUD_DIA
      * @param p_RUT
      * @param p_ID_TIPO_DIA_LIBRE
