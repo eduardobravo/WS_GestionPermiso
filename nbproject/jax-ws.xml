@@ -46,6 +46,9 @@
     <service name="SOLICITUD_DIA_tapi">
       <implementation-class>ws_pkg.SOLICITUD_DIA_tapi</implementation-class>
     </service>
+    <service name="CERTIFICADO_tapi">
+      <implementation-class>ws_pkg.CERTIFICADO_tapi</implementation-class>
+    </service>
   </services>
   <clients/>
   <jsr109>true</jsr109>
